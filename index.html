@@ -1,128 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Caroline's Portfolio</title>
-<link rel="stylesheet" href="style.css">
-</head>
 
-<body>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<header>
-<h1>Caroline Adeloye</h1>
-<p>Cybersecurity Student | System Administrator | Tech Enthusiast</p>
-</header>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#resume">Resume</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<section id="home">
-<h2>Welcome</h2>
-<p>Hello! I'm Caroline, a cybersecurity student passionate about protecting systems and learning new technologies.</p>
-</section>
-
-<section id="about">
-<h2>About Me</h2>
-<p>I am a cybersecurity student at Bowie State University with experience in Linux, networking, and system administration. I enjoy solving technical problems and building secure systems.</p>
-</section>
-
-<section id="projects">
-<h2>Projects</h2>
-
-<p>Linux Security Labs</p>
-<a href="https://github.com/YOURUSERNAME">View on GitHub</a>
-
-<p>Base64 Encryption Lab</p>
-<a href="https://github.com/YOURUSERNAME">View Project</a>
-
-</section>
-
-<section id="resume">
-<h2>Resume</h2>
-<a href="resume.pdf" download>Download My Resume</a>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-
-<!DOCTYPE html>
-<html>
-
-<head>
 <title>Caroline Adeloye | Portfolio</title>
 
 <style>
 
-body{
-font-family: Arial;
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
-header{
-background:#111;
+body{
+background:#0f0f10;
 color:white;
-text-align:center;
-padding:30px;
 }
+
+/* NAV */
 
 nav{
-background:#333;
-text-align:center;
-padding:10px;
+display:flex;
+justify-content:center;
+gap:40px;
+padding:20px;
+background:#151515;
 }
 
 nav a{
 color:white;
-margin:15px;
 text-decoration:none;
 font-weight:bold;
 }
 
-section{
-padding:40px;
-margin:20px;
-background:white;
+/* HERO SECTION */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px;
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#ccc;
+margin-bottom:20px;
+}
+
+.btn{
+padding:12px 25px;
+border-radius:25px;
+border:none;
+margin-right:10px;
+cursor:pointer;
+}
+
+.btn-primary{
+background:#f7a6b8;
+color:black;
+}
+
+.btn-outline{
+background:transparent;
+border:2px solid #f7a6b8;
+color:#f7a6b8;
+}
+
+.hero img{
+width:300px;
 border-radius:10px;
 }
 
-.projects a{
-display:block;
-margin:5px 0;
+/* SECTIONS */
+
+section{
+padding:80px;
 }
 
-button{
-padding:10px;
-background:black;
-color:white;
-border:none;
-cursor:pointer;
+/* ABOUT */
+
+.about{
+display:flex;
+gap:50px;
+align-items:center;
 }
+
+.about img{
+width:350px;
+border-radius:10px;
+}
+
+.skill{
+margin-top:15px;
+}
+
+.bar{
+background:#333;
+height:8px;
+border-radius:10px;
+}
+
+.progress{
+height:8px;
+background:#f7a6b8;
+border-radius:10px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+form input, textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:6px;
+border:none;
+}
+
+/* CHATBOT */
 
 #chatbot{
 position:fixed;
 bottom:20px;
 right:20px;
-width:250px;
 background:white;
-border:1px solid gray;
+color:black;
 padding:15px;
+width:250px;
 border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.2);
 }
 
 #chatbot input{
 width:100%;
 padding:8px;
-margin-top:5px;
+margin-top:8px;
 }
 
 .qr{
 text-align:center;
+margin-top:40px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#151515;
+margin-top:40px;
 }
 
 </style>
@@ -131,11 +180,6 @@ text-align:center;
 
 <body>
 
-<header>
-<h1>Caroline Adeloye</h1>
-<p>Cybersecurity Student | System Administrator | Tech Enthusiast</p>
-</header>
-
 <nav>
 
 <a href="#home">Home</a>
@@ -146,66 +190,131 @@ text-align:center;
 
 </nav>
 
-<section id="home">
+<!-- HERO -->
 
-<h2>Welcome</h2>
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h4>Hello, I'm</h4>
+<h1>Caroline Adeloye</h1>
 
 <p>
-Hello! My name is Caroline Adeloye. I am a cybersecurity student at Bowie State University with a strong interest in system security, Linux environments, and network protection. I enjoy learning new technologies and applying cybersecurity principles to real-world systems.
+Cybersecurity student passionate about system security,
+Linux environments, and ethical hacking.
 </p>
 
+<button class="btn btn-primary">View My Work</button>
+<button class="btn btn-outline">Let's Talk</button>
+
+</div>
+
+<img src="https://via.placeholder.com/300">
+
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
 
 <h2>About Me</h2>
 
+<div class="about">
+
+<img src="https://via.placeholder.com/350">
+
+<div>
+
 <p>
-I am currently studying cybersecurity and have experience working with Linux environments such as Ubuntu and Kali Linux. I have completed labs involving encryption, command line navigation, metadata extraction, and system security. I enjoy solving technical problems and improving my skills in cybersecurity, networking, and system administration.
+I am a cybersecurity student at Bowie State University with experience in Linux,
+network security, and system administration.
 </p>
 
-<h3>Skills</h3>
+<div class="skill">
+<p>Cybersecurity</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
 
-<ul>
+<div class="skill">
+<p>Linux</p>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
 
-<li>Linux (Kali Linux, Ubuntu)</li>
-<li>Cybersecurity Fundamentals</li>
-<li>Command Line Interface</li>
-<li>Networking</li>
-<li>System Administration</li>
-<li>HTML, CSS, JavaScript</li>
+<div class="skill">
+<p>Networking</p>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
 
-</ul>
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="progress" style="width:70%"></div></div>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section id="projects" class="projects">
+<!-- PROJECTS -->
+
+<section id="projects">
 
 <h2>Projects</h2>
 
-<p>Below are some cybersecurity and technical projects I have worked on.</p>
+<div class="projects">
 
-<a href="https://github.com/YOURUSERNAME">Linux Command Line Lab</a>
+<div class="card">
+<h3>Linux Command Lab</h3>
+<p>Practiced command-line tools and file navigation.</p>
+<a href="https://github.com/YOURUSERNAME">GitHub</a>
+</div>
 
-<a href="https://github.com/YOURUSERNAME">Base64 Encryption and Decryption Lab</a>
+<div class="card">
+<h3>Base64 Encryption</h3>
+<p>Encoded and decoded files using Linux terminal.</p>
+<a href="https://github.com/YOURUSERNAME">GitHub</a>
+</div>
 
-<a href="https://github.com/YOURUSERNAME">ExifTool Metadata Analysis</a>
+<div class="card">
+<h3>Metadata Analysis</h3>
+<p>Used ExifTool to extract file metadata.</p>
+<a href="https://github.com/YOURUSERNAME">GitHub</a>
+</div>
 
-<a href="https://github.com/YOURUSERNAME">Linux File System Hierarchy Research</a>
+</div>
 
 </section>
+
+<!-- RESUME -->
 
 <section id="resume">
 
 <h2>Resume</h2>
 
-<p>You can view or download my resume below.</p>
+<p>View or download my resume below.</p>
+
+<a href="resume.pdf" target="_blank">
+<button class="btn btn-primary">View Resume</button>
+</a>
 
 <a href="resume.pdf" download>
-<button>Download Resume</button>
+<button class="btn btn-outline">Download Resume</button>
 </a>
 
 </section>
+
+<!-- QR CODE -->
+
+<section class="qr">
+
+<h2>Portfolio QR Code</h2>
+
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://github.com/YOURUSERNAME">
+
+</section>
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -213,35 +322,25 @@ I am currently studying cybersecurity and have experience working with Linux env
 
 <form>
 
-<input type="text" placeholder="Your Name" required><br><br>
+<input type="text" placeholder="Name">
 
-<input type="email" placeholder="Your Email" required><br><br>
+<input type="email" placeholder="Email">
 
-<textarea placeholder="Your Message" rows="5" cols="40"></textarea><br><br>
+<textarea rows="5" placeholder="Message"></textarea>
 
-<button type="submit">Send Message</button>
+<button class="btn btn-primary">Send</button>
 
 </form>
 
 </section>
 
-<section class="qr">
-
-<h2>Portfolio QR Code</h2>
-
-<p>Scan this QR code to access my portfolio quickly.</p>
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/YOURUSERNAME" alt="QR Code">
-
-</section>
-
-<!-- Chatbot -->
+<!-- CHATBOT -->
 
 <div id="chatbot">
 
-<h3>Ask Me</h3>
+<h4>Chatbot</h4>
 
-<input id="userInput" placeholder="Ask about my skills...">
+<input id="userInput" placeholder="Ask me something">
 
 <button onclick="chat()">Send</button>
 
@@ -249,23 +348,29 @@ I am currently studying cybersecurity and have experience working with Linux env
 
 </div>
 
+<footer>
+
+<p>© 2026 Caroline Adeloye</p>
+
+</footer>
+
 <script>
 
 function chat(){
 
-let input = document.getElementById("userInput").value.toLowerCase()
+let input=document.getElementById("userInput").value.toLowerCase()
 
 let response=""
 
 if(input.includes("skills")){
 
-response="My skills include Linux, cybersecurity, networking, and system administration."
+response="My skills include Linux, cybersecurity, networking, and JavaScript."
 
 }
 
 else if(input.includes("projects")){
 
-response="You can view my cybersecurity labs and coding projects in the Projects section."
+response="You can see my cybersecurity labs in the Projects section."
 
 }
 
@@ -275,15 +380,9 @@ response="I attend Bowie State University studying cybersecurity."
 
 }
 
-else if(input.includes("experience")){
-
-response="I have experience working with Linux systems, command line tools, and cybersecurity labs."
-
-}
-
 else{
 
-response="Thanks for your question! Please check my portfolio sections or contact me."
+response="Feel free to explore my portfolio or contact me!"
 
 }
 
@@ -294,5 +393,4 @@ document.getElementById("botResponse").innerText=response
 </script>
 
 </body>
-
 </html>
