@@ -1,396 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Caroline Adeloye | Portfolio</title>
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+"full_name": "Caroline Adeloye",
+  "title": "Cybersecurity Student & Risk Management Specialist",
+  "bio": "Aspiring cybersecurity professional specializing in Risk Management & Assessment at Bowie State University. I'm passionate about protecting digital systems, analyzing threats, and building secure, resilient infrastructures.",
+  "about_text": "I'm a Computer Technology student at Bowie State University with a concentration in Cybersecurity, specifically on the Risk Management and Assessment track. I'm passionate about identifying vulnerabilities, analyzing security risks, and developing strategies to protect organizations from evolving cyber threats.\n\nMy academic journey has equipped me with hands-on knowledge of security frameworks such as NIST, ISO 27001, and FISMA, as well as tools used in vulnerability assessments and compliance audits. I believe that great cybersecurity starts with understanding risk — not just technically, but from a business and policy perspective as well.\n\nOutside of class, I enjoy staying current with the latest in cybersecurity news, studying real-world breach case studies, and building projects that demonstrate my skills. I'm actively seeking internships and entry-level roles where I can apply my knowledge and grow as a security professional.",
+  "skills": [
+    "Risk Management",
+    "Risk Assessment",
+    "NIST Framework",
+    "ISO 27001",
+    "FISMA Compliance",
+    "Vulnerability Assessment",
+    "Threat Modeling",
+    "Network Security",
+    "Security Auditing",
+    "Python",
+    "Linux",
+    "Wireshark",
+    "Nessus",
+    "SIEM Tools",
+    "Incident Response",
+    "Security Policies",
+    "Data Privacy",
+    "Ethical Hacking Fundamentals"
+  ],
+  "experiences": [
+    {
+      "company": "Bowie State University",
+      "role": "Cybersecurity Lab Assistant (Academic)",
+      "period": "2024 - Present",
+      "description": "Assist peers in cybersecurity lab exercises including network scanning, vulnerability assessments, and security tool usage. Help document lab findings and contribute to cybersecurity research projects."
+    },
+    {
+      "company": "Personal Projects & CTF Challenges",
+      "role": "Independent Security Researcher",
+      "period": "2023 - Present",
+      "description": "Participate in Capture The Flag (CTF) competitions to sharpen penetration testing and risk analysis skills. Build home lab environments to practice network security monitoring and threat detection."
+    },
+    {
+      "company": "Community Cybersecurity Awareness Initiative",
+      "role": "Volunteer Security Educator",
+      "period": "2023 - Present",
+      "description": "Conduct cybersecurity awareness workshops for community members on topics like phishing prevention, password hygiene, and safe browsing practices."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Bowie State University",
+      "degree": "B.S. Computer Technology — Cybersecurity (Risk Management & Assessment Track)",
+      "period": "2022 - Present (Expected 2026)"
+    },
+    {
+      "institution": "Certifications & Training",
+      "degree": "CompTIA Security+ (In Progress) | Google Cybersecurity Certificate | TryHackMe SOC Level 1",
+      "period": "2024 - Present"
+    }
+  ],
+  "github_url": "https://adeloyec09023.github.io",
+  "linkedin_url": "",
+  "email": "",
+  "portfolio_url": "https://adeloyec09023.github.io",
+  "projects": [
+    {
+      "name": "Risk Assessment Framework Tool",
+      "description": "A Python-based tool that automates the risk scoring process using NIST SP 800-30 guidelines. Generates detailed risk reports with likelihood and impact ratings for identified threats.",
+      "tech_stack": [
+        "Python",
+        "NIST Framework",
+        "CSV/JSON",
+        "Risk Scoring"
+      ],
+      "github_link": "https://adeloyec09023.github.io",
+      "live_link": "",
+      "image_url": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=800&q=80"
+    },
+    {
+      "name": "Network Vulnerability Scanner",
+      "description": "A home-lab network scanner built using Nmap and Python scripting to identify open ports, running services, and potential attack vectors on a simulated network environment.",
+      "tech_stack": [
+        "Python",
+        "Nmap",
+        "Linux",
+        "Networking"
+      ],
+      "github_link": "https://adeloyec09023.github.io",
+      "live_link": "",
+      "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+    },
+    {
+      "name": "Cybersecurity Policy Handbook",
+      "description": "A comprehensive security policy document modeled after real enterprise standards. Includes Acceptable Use Policy, Incident Response Plan, and Data Classification guidelines.",
+      "tech_stack": [
+        "Security Policy",
+        "NIST",
+        "ISO 27001",
+        "Documentation"
+      ],
+      "github_link": "https://adeloyec09023.github.io",
+      "live_link": "",
+      "image_url": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&q=80"
+    },
+    {
+      "name": "Phishing Awareness Campaign",
+      "description": "Designed and deployed a simulated phishing campaign and training module to educate users about social engineering attacks. Included pre/post assessment to measure security awareness improvement.",
+      "tech_stack": [
+        "Social Engineering",
+        "Security Awareness",
+        "HTML/CSS",
+        "Education"
+      ],
+      "github_link": "https://adeloyec09023.github.io",
+      "live_link": "",
+      "image_url": "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&q=80"
+    }
+  ]
 }
-
-body{
-background:#0f0f10;
-color:white;
-}
-
-/* NAV */
-
-nav{
-display:flex;
-justify-content:center;
-gap:40px;
-padding:20px;
-background:#151515;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* HERO SECTION */
-
-.hero{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:80px;
-}
-
-.hero-text{
-max-width:500px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:10px;
-}
-
-.hero p{
-color:#ccc;
-margin-bottom:20px;
-}
-
-.btn{
-padding:12px 25px;
-border-radius:25px;
-border:none;
-margin-right:10px;
-cursor:pointer;
-}
-
-.btn-primary{
-background:#f7a6b8;
-color:black;
-}
-
-.btn-outline{
-background:transparent;
-border:2px solid #f7a6b8;
-color:#f7a6b8;
-}
-
-.hero img{
-width:300px;
-border-radius:10px;
-}
-
-/* SECTIONS */
-
-section{
-padding:80px;
-}
-
-/* ABOUT */
-
-.about{
-display:flex;
-gap:50px;
-align-items:center;
-}
-
-.about img{
-width:350px;
-border-radius:10px;
-}
-
-.skill{
-margin-top:15px;
-}
-
-.bar{
-background:#333;
-height:8px;
-border-radius:10px;
-}
-
-.progress{
-height:8px;
-background:#f7a6b8;
-border-radius:10px;
-}
-
-/* PROJECTS */
-
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:#1a1a1a;
-padding:20px;
-border-radius:10px;
-}
-
-/* CONTACT */
-
-form input, textarea{
-width:100%;
-padding:10px;
-margin:10px 0;
-border-radius:6px;
-border:none;
-}
-
-/* CHATBOT */
-
-#chatbot{
-position:fixed;
-bottom:20px;
-right:20px;
-background:white;
-color:black;
-padding:15px;
-width:250px;
-border-radius:10px;
-}
-
-#chatbot input{
-width:100%;
-padding:8px;
-margin-top:8px;
-}
-
-.qr{
-text-align:center;
-margin-top:40px;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#151515;
-margin-top:40px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<nav>
-
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#resume">Resume</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<div class="hero-text">
-
-<h4>Hello, I'm</h4>
-<h1>Caroline Adeloye</h1>
-
-<p>
-Cybersecurity student passionate about system security,
-Linux environments, and ethical hacking.
-</p>
-
-<button class="btn btn-primary">View My Work</button>
-<button class="btn btn-outline">Let's Talk</button>
-
-</div>
-
-<img src="https://via.placeholder.com/300">
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<div class="about">
-
-<img src="https://via.placeholder.com/350">
-
-<div>
-
-<p>
-I am a cybersecurity student at Bowie State University with experience in Linux,
-network security, and system administration.
-</p>
-
-<div class="skill">
-<p>Cybersecurity</p>
-<div class="bar"><div class="progress" style="width:90%"></div></div>
-</div>
-
-<div class="skill">
-<p>Linux</p>
-<div class="bar"><div class="progress" style="width:85%"></div></div>
-</div>
-
-<div class="skill">
-<p>Networking</p>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-<p>JavaScript</p>
-<div class="bar"><div class="progress" style="width:70%"></div></div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects">
-
-<div class="card">
-<h3>Linux Command Lab</h3>
-<p>Practiced command-line tools and file navigation.</p>
-<a href="https://github.com/YOURUSERNAME">GitHub</a>
-</div>
-
-<div class="card">
-<h3>Base64 Encryption</h3>
-<p>Encoded and decoded files using Linux terminal.</p>
-<a href="https://github.com/YOURUSERNAME">GitHub</a>
-</div>
-
-<div class="card">
-<h3>Metadata Analysis</h3>
-<p>Used ExifTool to extract file metadata.</p>
-<a href="https://github.com/YOURUSERNAME">GitHub</a>
-</div>
-
-</div>
-
-</section>
-
-<!-- RESUME -->
-
-<section id="resume">
-
-<h2>Resume</h2>
-
-<p>View or download my resume below.</p>
-
-<a href="resume.pdf" target="_blank">
-<button class="btn btn-primary">View Resume</button>
-</a>
-
-<a href="resume.pdf" download>
-<button class="btn btn-outline">Download Resume</button>
-</a>
-
-</section>
-
-<!-- QR CODE -->
-
-<section class="qr">
-
-<h2>Portfolio QR Code</h2>
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://github.com/YOURUSERNAME">
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact Me</h2>
-
-<form>
-
-<input type="text" placeholder="Name">
-
-<input type="email" placeholder="Email">
-
-<textarea rows="5" placeholder="Message"></textarea>
-
-<button class="btn btn-primary">Send</button>
-
-</form>
-
-</section>
-
-<!-- CHATBOT -->
-
-<div id="chatbot">
-
-<h4>Chatbot</h4>
-
-<input id="userInput" placeholder="Ask me something">
-
-<button onclick="chat()">Send</button>
-
-<p id="botResponse"></p>
-
-</div>
-
-<footer>
-
-<p>© 2026 Caroline Adeloye</p>
-
-</footer>
-
-<script>
-
-function chat(){
-
-let input=document.getElementById("userInput").value.toLowerCase()
-
-let response=""
-
-if(input.includes("skills")){
-
-response="My skills include Linux, cybersecurity, networking, and JavaScript."
-
-}
-
-else if(input.includes("projects")){
-
-response="You can see my cybersecurity labs in the Projects section."
-
-}
-
-else if(input.includes("school")){
-
-response="I attend Bowie State University studying cybersecurity."
-
-}
-
-else{
-
-response="Feel free to explore my portfolio or contact me!"
-
-}
-
-document.getElementById("botResponse").innerText=response
-
-}
-
-</script>
-
-</body>
-</html>
