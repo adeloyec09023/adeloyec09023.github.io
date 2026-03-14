@@ -1,127 +1,353 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #1f1c2c, #928dab);
-    color: white;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: #fff;
-            text-decoration: none;
-        }
-	nav a:hover {
-   	 color: #ffd700;
-	}
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #ccc;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
-    <script>
-        function handleChatbot() {
-            // Placeholder function for chatbot
-            alert('Chatbot interaction goes here!');
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caroline Adeloye Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background: linear-gradient(to right,#1f1c2c,#928dab);
+color:white;
+text-align:center;
+}
+
+/* LIGHT MODE */
+
+.lightmode{
+background:white;
+color:black;
+}
+
+/* HEADER */
+
+header{
+background:#111;
+padding:20px;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+}
+
+nav a:hover{
+color:gold;
+}
+
+/* PROFILE */
+
+.profile{
+width:180px;
+border-radius:50%;
+margin-top:20px;
+border:4px solid white;
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 20px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+animation:fadeIn 1s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* PROJECTS */
+
+.projects-container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.project-card{
+background:white;
+color:black;
+padding:20px;
+margin:15px;
+border-radius:10px;
+width:250px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:scale(1.05);
+box-shadow:0px 0px 20px gold;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.skill{
+background:white;
+color:black;
+margin:10px;
+padding:10px 20px;
+border-radius:20px;
+}
+
+/* BUTTON */
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:gold;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:orange;
+}
+
+/* SOCIAL ICONS */
+
+.social i{
+font-size:30px;
+margin:15px;
+color:white;
+}
+
+.social i:hover{
+color:gold;
+}
+
+/* CHATBOX */
+
+#chatbox{
+position:fixed;
+bottom:20px;
+right:20px;
+background:white;
+color:black;
+padding:15px;
+border-radius:10px;
+width:220px;
+}
+
+#chatbox input{
+width:100%;
+padding:5px;
+margin-top:5px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Hello, Im Caroline Adeloye</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-    </nav>
+
+<h1>Caroline Adeloye</h1>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<button onclick="toggleMode()">Toggle Mode</button>
+
 </header>
 
+<!-- HOME -->
+
 <section id="home">
-    <img src="profile.jpg" alt="C:\Users\carol\OneDrive\Pictures\Screenshots\Screenshot 2026-03-14 053435.png" class="profile">
-	<h1>Welcome to my page<h2>
-   <p>Cybersecurity Student | System Administrator | Future Cyber Threat Analyst</p>
+
+<img src="profile.jpg" class="profile">
+
+<h2>Hello I'm Caroline</h2>
+
+<p id="typing"></p>
+
 </section>
+
+<!-- ABOUT -->
 
 <section id="about">
-    <h2>About</h2>
-    <p>I am a passionate cyber threat analyst with experience in creating dynamic web applications.</p>
+
+<h2>About Me</h2>
+
+<p>
+I am passionate about cybersecurity, technology, and protecting systems from cyber threats.
+I have experience working with Linux, Kali Linux, network security labs, and system administration.
+</p>
+
 </section>
 
+<!-- PROJECTS -->
 
-</section>
 <section id="projects">
+
 <h2>Projects</h2>
+
+<div class="projects-container">
 
 <div class="project-card">
 <h3>Network Recon Lab</h3>
-<p>Used Nmap to scan networks and identify devices.</p>
+<p>Used Nmap and Netdiscover to scan networks and identify devices.</p>
 </div>
 
 <div class="project-card">
-<h3>Firewall Lab</h3>
-<p>Configured firewall rules to block malicious traffic.</p>
+<h3>Firewall Configuration</h3>
+<p>Configured firewall rules to analyze and block suspicious traffic.</p>
+</div>
+
+<div class="project-card">
+<h3>Base64 Encryption Lab</h3>
+<p>Encoded and decoded files using Base64 in Linux terminal.</p>
+</div>
+
 </div>
 
 </section>
 
-.project-card{
-    background: white;
-    color: black;
-    padding:20px;
-    margin:15px;
-    border-radius:10px;
-    width:250px;
-    display:inline-block;
-}
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Cybersecurity</div>
+<div class="skill">Linux</div>
+<div class="skill">Kali Linux</div>
+<div class="skill">Network Security</div>
+<div class="skill">Python</div>
+<div class="skill">System Administration</div>
+
+</div>
+
+</section>
+
+<!-- RESUME -->
 
 <section id="resume">
-    <h2>Resume</h2>
-    <p>List of skills or education details here.</p>
-    <button onclick="handleChatbot()">Chat with me!</button>
+
+<h2>Resume</h2>
+
+<p>Click below to download my resume.</p>
+
 <a href="resume.pdf" download>
 <button>Download Resume</button>
 </a>
+
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>You can contact me at: Carolineade28@gmail.com.com</p>
-</section>
+<!-- QR CODE -->
 
-<p>
-<a href="https://adeloyec09023.github.io/">GitHub</a> |
-<a href="www.linkedin.com/in/caroline-adeloye-71ba2a2a7">LinkedIn</a>
-</p>
+<section>
 
-<h3>Scan to view my portfolio</h3>
+<h2>Scan My Portfolio</h2>
+
+<p>Use this QR code to view my portfolio.</p>
+
 <img src="qrcode.png" width="150">
 
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Me</h2>
+
+<p>Email: Carolineade28@gmail.com</p>
+
+<div class="social">
+
+<a href="#"><i class="fa-brands fa-github"></i></a>
+<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-solid fa-envelope"></i></a>
+
+</div>
+
+</section>
+
+<!-- CHATBOT -->
+
+<div id="chatbox">
+
+<p>Ask me about my projects!</p>
+
+<input type="text" placeholder="Type a message...">
+
+</div>
+
 <footer>
-    <p>&copy; 2026 Carolin Adeloye</p>
+
+<p>© 2026 Caroline Adeloye</p>
+
 </footer>
+
+<script>
+
+/* typing animation */
+
+const text = "Cybersecurity Student | System Administrator | Future Cyber Threat Analyst";
+let index = 0;
+
+function typeEffect(){
+if(index < text.length){
+document.getElementById("typing").innerHTML += text.charAt(index);
+index++;
+setTimeout(typeEffect,50);
+}
+}
+
+typeEffect();
+
+/* dark light mode */
+
+function toggleMode(){
+document.body.classList.toggle("lightmode");
+}
+
+</script>
 
 </body>
 </html>
+```
